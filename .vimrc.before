@@ -1,0 +1,36 @@
+"let mapleader = ""
+let mapleader = "\<Space>"
+"set rtp+=~/.janus/powerline/powerline/bindings/vim
+"set guifont=Inconsolata-dz\ for\ Powerline:h12
+set rtp+=~/.vim/bundle/vim-airline
+set guifont=Inconsolata-dz\ for\ Powerline:h12
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+"I can select some text and paste over it without worrying if my paste buffer was replaced by the just removed text (place it close to end of ~/vimrc).
+" vp doesn't replace paste buffer
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+vmap <silent> <expr> p <sid>Repl()
+let g:airline_theme='powerlineish'
+"let g:airline_left_sep=''
+"let g:airline_right_sep=''
+let g:airline_section_z=''
+
+"before snipmate blocks functionality of ternjs
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
