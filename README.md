@@ -17,8 +17,6 @@ These are my dotfiles: `~/.*`
 
 [prompt]: /zsh/prompt.zsh
 
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-
 ## TODO
 * powerline implementation
 * iterm2
