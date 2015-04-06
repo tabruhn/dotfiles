@@ -5,7 +5,7 @@ These are my dotfiles: `~/.*`
 ## Prereqs / Maybes
 * Install ZSH
 
-    $ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+    `$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh`
 * ZSH. To change your default shell to ZSH: `chsh -s $(which zsh) $USER`
 * [Homebrew](http://brew.sh/).
 
